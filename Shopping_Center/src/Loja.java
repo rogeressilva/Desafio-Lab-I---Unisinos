@@ -6,12 +6,17 @@ public class Loja {
      private int quantidadeFuncionarios;
      private double salarioBaseFuncionario;
 
-        
+     //Atributos já criados que foram adicionados ao atributo Loja
+     private Endereco endereco;
+     private Data dataDeFundacao;
+       
      // Construtor I - Começa tudo
-     public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario) {
+     public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataDeFundacao) {
          this.nome = nome;
          this.quantidadeFuncionarios = quantidadeFuncionarios;
          this.salarioBaseFuncionario = salarioBaseFuncionario;
+         this.endereco = endereco; //Construtor atualizado para receber o atributo Endereco
+         this.dataDeFundacao = dataDeFundacao; //Construtor atualizado para receber o atributo Data
      }
 
      // Construtor II - Somente o nome e a quantidade de funcionarios
@@ -19,6 +24,8 @@ public class Loja {
          this.nome = nome;
          this.quantidadeFuncionarios = quantidadeFuncionarios;
          this.salarioBaseFuncionario = -1;
+         this.endereco = null; //Construtor atualizado para receber o atributo Endereco, porém esse contrutor deve receber somente os atributos nome e quantidade de funcionarios
+         this.dataDeFundacao = null; //Construtor atualizado para receber o atributo Data, porém esse contrutor deve receber somente os atributos nome e quantidade de funcionarios
      }
 
      //Getters e Setters
@@ -44,6 +51,23 @@ public class Loja {
 
        public void setSalarioBaseFuncionario(double salarioBaseFuncionario) {
          this.salarioBaseFuncionario = salarioBaseFuncionario;
+     }
+
+     //Getters e Setters dos atributos adicionados Endereco e Data
+      public Endereco getEndereco() {
+        return endereco;
+    }
+
+     public void setEndereco(Endereco endereco) {
+         this.endereco = endereco;
+     }
+
+     public Data getDataDeFundacao() {
+         return dataDeFundacao;
+     }
+
+     public void setDataDeFundacao(Data dataDeFundacao) {
+         this.dataDeFundacao = dataDeFundacao;
      }
 
      // Método para calcular o salário total dos funcionários
