@@ -9,6 +9,8 @@ public class Endereco {
     private String numero;
     private String complemento;
 
+    //Atributos já criados que foram adicionados ao atributo Endereco
+
     // Construtor para receber os atributos
     public Endereco(String nomeDaRua, String cidade, String estado, String pais, String cep, String numero, String complemento) {
         this.nomeDaRua = nomeDaRua;
