@@ -63,6 +63,12 @@ public class Loja {
          } else {
              return 'G';
          }
-    }     
+    }  
+    
+    // Método toString para exibir as informações da loja
+     @Override
+    public String toString() {
+    return "Loja: " + nome + ", Quantidade de Funcionários: " + quantidadeFuncionarios + ", Salário Base: R$" + salarioBaseFuncionario;
+    }
     
 }

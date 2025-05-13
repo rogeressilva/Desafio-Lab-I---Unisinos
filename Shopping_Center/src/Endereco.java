@@ -76,4 +76,10 @@ public class Endereco {
     public void setComplemento(String complemento) {
         this.complemento = complemento;
     }
+
+    // Método toString para exibir a endereço completo
+     @Override
+    public String toString() {
+    return "Endereço: " + nomeDaRua + ", " + numero + ", " + complemento + ", " + cidade + ", " + estado + ", " + pais + ", CEP: " + cep;
+    }
 }

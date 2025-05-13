@@ -26,4 +26,10 @@ public class Produto {
     public void setPreco(double preco) {
         this.preco = preco;
     }
+
+    // Método toString para exibir as informações do produto
+     @Override
+    public String toString() {
+    return "Produto: " + nome + ", Preço: R$" + preco;
+    }
 }
