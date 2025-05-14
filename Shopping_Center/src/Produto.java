@@ -41,6 +41,11 @@ public class Produto {
         this.dataValidade = dataValidade;
     }
 
+    // Método para verificar se o produto está vencido
+    public boolean estaVencido(Data dataReferencia) {
+        return !dataValidade.maiorOuIgualQue(dataReferencia);
+    }
+
     // Método toString para exibir as informações do produto
      @Override
     public String toString() {
