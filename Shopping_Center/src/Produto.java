@@ -49,6 +49,6 @@ public class Produto {
     // Método toString para exibir as informações do produto
      @Override
     public String toString() {
-    return "Produto: " + nome + ", Preço: R$" + preco;
+    return "Produto: " + nome + ", Preço: R$" + preco + ", Data de Validade: " + dataValidade;
     }
 }

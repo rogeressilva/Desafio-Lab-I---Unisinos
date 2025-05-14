@@ -1,6 +1,5 @@
 public class Loja {
 
-
      // Atributos
      private String nome;
      private int quantidadeFuncionarios;
@@ -92,7 +91,7 @@ public class Loja {
     // Método toString para exibir as informações da loja
      @Override
     public String toString() {
-    return "Loja: " + nome + ", Quantidade de Funcionários: " + quantidadeFuncionarios + ", Salário Base: R$" + salarioBaseFuncionario;
+    return "Loja: " + nome + ", Quantidade de Funcionários: " + quantidadeFuncionarios + ", Salário Base: R$" + salarioBaseFuncionario + ", Endereço: " + endereco + ", Data de Fundação: " + dataDeFundacao;
     }
     
 }
