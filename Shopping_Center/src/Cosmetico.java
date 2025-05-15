@@ -9,7 +9,7 @@ public class Cosmetico extends Loja {
     public Cosmetico(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataDeFundacao, double taxaComercializacao) {
         super (nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataDeFundacao); //Super chama o construtor da superclasse Loja
         this.taxaComercializacao = taxaComercializacao;
-     }
+    }
 
      //Getters e Setters
     public double getTaxaComercializacao() {
