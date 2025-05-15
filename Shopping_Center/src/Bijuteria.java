@@ -19,6 +19,7 @@ public class Bijuteria extends Loja {
         this.metaDeVendas = metaDeVendas;
     }
 
+    // Sobrescrita do método toString
     @Override
     public String toString() {
         return super.toString() + 
