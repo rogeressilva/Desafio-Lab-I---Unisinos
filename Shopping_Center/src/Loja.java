@@ -8,14 +8,18 @@ public class Loja {
      //Atributos já criados que foram adicionados ao atributo Loja
      private Endereco endereco;
      private Data dataDeFundacao;
-       
+
+     //Atributo criado com Array
+     private Produto[] estoqueProdutos;
+
      // Construtor I - Começa tudo
-     public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataDeFundacao) {
+     public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataDeFundacao, int capacidadeEstoque) {
          this.nome = nome;
          this.quantidadeFuncionarios = quantidadeFuncionarios;
          this.salarioBaseFuncionario = salarioBaseFuncionario;
          this.endereco = endereco; //Construtor atualizado para receber o atributo Endereco
          this.dataDeFundacao = dataDeFundacao; //Construtor atualizado para receber o atributo Data
+         this.estoqueProdutos = new Produto [capacidadeEstoque];
      }
 
      // Construtor II - Somente o nome e a quantidade de funcionarios
@@ -67,6 +71,15 @@ public class Loja {
 
      public void setDataDeFundacao(Data dataDeFundacao) {
          this.dataDeFundacao = dataDeFundacao;
+     }
+
+    //Getters e Setters do atributo Produto
+      public Produto[] getEstoqueProdutos() {
+        return estoqueProdutos;
+    }
+
+     public void setEstoqueProdutos(Produto[] estoqueProdutos) {
+         this.estoqueProdutos = estoqueProdutos;
      }
 
      // Método para calcular o salário total dos funcionários

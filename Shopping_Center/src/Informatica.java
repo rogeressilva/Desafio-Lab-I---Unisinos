@@ -5,8 +5,8 @@ public class Informatica extends Loja{
     private double seguroEletronicos;
 
     //Contrutor que recebe informações para iniciar os atributos
-    public Informatica(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataDeFundacao, double seguroEletronicos) {
-        super (nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataDeFundacao); //Super chama o construtor da superclasse Loja
+    public Informatica(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataDeFundacao, double seguroEletronicos, int capacidadeEstoque) {
+        super (nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataDeFundacao, capacidadeEstoque); //Super chama o construtor da superclasse Loja
         this.seguroEletronicos = seguroEletronicos;
     }
 

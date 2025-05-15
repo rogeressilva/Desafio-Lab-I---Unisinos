@@ -5,8 +5,8 @@ public class Vestuario extends Loja {
     private boolean produtosImportados; 
 
     //Contrutor que recebe informações para iniciar os atributos
-    public Vestuario(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataDeFundacao,boolean produtosImportados) {
-        super (nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataDeFundacao); //Super chama o construtor da superclasse Loja
+    public Vestuario(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataDeFundacao,boolean produtosImportados,int capacidadeEstoque) {
+        super (nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataDeFundacao, capacidadeEstoque); //Super chama o construtor da superclasse Loja
         this.produtosImportados = produtosImportados;
     }
 

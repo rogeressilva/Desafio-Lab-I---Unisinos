@@ -6,8 +6,8 @@ public class Cosmetico extends Loja {
     private double taxaComercializacao; 
 
     //Contrutor que recebe informações para iniciar os atributos
-    public Cosmetico(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataDeFundacao, double taxaComercializacao) {
-        super (nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataDeFundacao); //Super chama o construtor da superclasse Loja
+    public Cosmetico(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataDeFundacao, double taxaComercializacao, int capacidadeEstoque) {
+        super (nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataDeFundacao, capacidadeEstoque); //Super chama o construtor da superclasse Loja
         this.taxaComercializacao = taxaComercializacao;
     }
 

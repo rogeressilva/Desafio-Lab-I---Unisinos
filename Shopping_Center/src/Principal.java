@@ -61,8 +61,11 @@ public class Principal {
         int mes = lerInteiro("Mês: ");
         int ano = lerInteiro("Ano: ");
         Data dataFundacao = new Data(dia, mes, ano);
+
+        // Inicializando estoqueProdutos
+        int estoqueProdutos = lerInteiro("Capacidade do estoque: ");
         
-        return new Loja(nome, quantidadeFuncionarios, salarioBase, endereco, dataFundacao);
+        return new Loja(nome, quantidadeFuncionarios, salarioBase, endereco, dataFundacao, estoqueProdutos);
     }
 
     private static Produto criarProduto() {
