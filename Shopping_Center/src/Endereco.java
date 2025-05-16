@@ -1,7 +1,7 @@
 public class Endereco {
     
     // Atributos    
-    private String rua;
+    private String nomeDaRua;
     private String cidade;
     private String estado;
     private String pais;
@@ -11,7 +11,7 @@ public class Endereco {
 
     // Construtor para receber os atributos
     public Endereco(String rua, String cidade, String estado, String pais, String cep, String numero, String complemento) {
-        this.rua = rua;
+        this.nomeDaRua = rua;
         this.cidade = cidade;
         this.estado = estado;
         this.pais = pais;
@@ -21,12 +21,12 @@ public class Endereco {
     }
 
     // Getters e Setters
-    public String getRua() {
-        return rua;
+    public String getNomeDaRua() {
+        return nomeDaRua;
     }
 
-    public void setRua(String nomeDaRua) {
-        this.rua = nomeDaRua;
+    public void setNomeDaRua(String nomeDaRua) {
+        this.nomeDaRua = nomeDaRua;
     }
 
     public String getCidade() {
@@ -80,6 +80,6 @@ public class Endereco {
     // Método toString para exibir a endereço completo
      @Override
     public String toString() {
-    return "Endereço: " + rua + ", " + numero + ", " + complemento + ", " + cidade + ", " + estado + ", " + pais + ", CEP: " + cep;
+    return "Endereço: " + nomeDaRua + ", " + numero + ", " + complemento + ", " + cidade + ", " + estado + ", " + pais + ", CEP: " + cep;
     }
 }

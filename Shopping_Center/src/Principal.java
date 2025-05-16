@@ -99,7 +99,7 @@ public class Principal {
         System.out.println("Salário Base: " + loja.getSalarioBaseFuncionario());
         
         Endereco endereco = loja.getEndereco();
-        System.out.println("Endereço: " + endereco.getRua() + ", " + 
+        System.out.println("Endereço: " + endereco.getNomeDaRua() + ", " + 
                           endereco.getCidade() + " - " + endereco.getEstado() + 
                           " CEP: " + endereco.getCep());
         

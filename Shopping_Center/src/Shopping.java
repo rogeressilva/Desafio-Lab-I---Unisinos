@@ -78,29 +78,29 @@ public class Shopping {
     }
 
     //Método para identificar qual loja tem o seguro mais caro
-    public Loja lojaSeguroMaisCaro() {
-        Loja lojaMaisCara = null;
-        double maiorValorSeguro = -1;
-    
-    // Percorre todas as lojas
-    for (int i = 0; i < quantidadeLojas; i++) {
-        Loja lojaAtual = lojas[i];
-        
-        // Verifica se é uma loja de Informática e tem seguro
-        if (lojaAtual != null && 
-            lojaAtual.getTipo().equalsIgnoreCase("Informática") && 
-            lojaAtual.getValorSeguroEletronicos() > 0) {
-            
-            // Compara o valor do seguro
-            if (lojaAtual.getValorSeguroEletronicos() > maiorValorSeguro) {
-                maiorValorSeguro = lojaAtual.getValorSeguroEletronicos();
-                lojaMaisCara = lojaAtual;
+    public Informatica lojaSeguroMaisCaro() {
+        Informatica lojaMaisCara = null;
+        double maiorValorSeguro = 0;
+
+        // Percorre todas as lojas  
+        for (int i = 0; i < quantidadeLojas; i++) {
+            Loja lojaAtual = lojas[i];
+
+            // Verifica se é uma loja de Informática e tem seguro
+            if (lojaAtual != null &&
+                lojaAtual.getTipo().equalsIgnoreCase("Informática") &&
+                lojaAtual.getValorSeguroEletronicos() > 0) {
+
+                // Compara o valor do seguro
+                if (lojaAtual.getValorSeguroEletronicos() > maiorValorSeguro) {
+                    maiorValorSeguro = lojaAtual.getValorSeguroEletronicos();
+                    lojaMaisCara = (Informatica) lojaAtual; 
+                }
             }
         }
+
+        return lojaMaisCara;
     }
-    
-    return lojaMaisCara;
- }
 
     //Getters e Setters
     public String getNome() {

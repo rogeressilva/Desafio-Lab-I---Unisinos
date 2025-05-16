@@ -33,6 +33,16 @@ public class Loja {
          this.dataDeFundacao = null; //Construtor atualizado para receber o atributo Data, porém esse contrutor deve receber somente os atributos nome e quantidade de funcionarios
      }
 
+      public Loja(String nome, int quantidadeFuncionarios, Endereco endereco, Data dataDeFundacao, int capacidadeEstoque) {
+         this.nome = nome;
+         this.quantidadeFuncionarios = quantidadeFuncionarios;
+         this.endereco = endereco; //Construtor atualizado para receber o atributo Endereco
+         this.dataDeFundacao = dataDeFundacao; //Construtor atualizado para receber o atributo Data
+         this.estoqueProdutos = new Produto [capacidadeEstoque]; //Construtor atualizado para informar a quantidade maxima de produtos
+     }
+
+     
+
      //Métodos para imprimir as informações dos produtos da Loja
      public void imprimirProdutos () {
         System.out.println ("--PRODUTOS DA LOJA--");
@@ -159,7 +169,7 @@ public class Loja {
      }
 
      // Método para calcular o salário total dos funcionários
-     public double calcularSalarioTotalFuncionarios() {
+     public double gastosComSalario() {
          if (salarioBaseFuncionario < 0) {
             return -1; // Retorna -1 se o salário base não foi definido
          }
@@ -176,6 +186,17 @@ public class Loja {
              return 'G';
          }
      }  
+
+     //Método para imprimir o produto
+     public void imprimeProdutos() {
+        if (estoqueProdutos != null) {
+            for (Produto p : estoqueProdutos) {
+                if (p != null) {
+                    System.out.println(p);
+                }
+            }
+        }
+    }
 
     // Método Tipo
      public String getTipo() {
