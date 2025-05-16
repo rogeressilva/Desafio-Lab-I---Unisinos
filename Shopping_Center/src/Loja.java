@@ -47,7 +47,7 @@ public class Loja {
      }
 
      // Método para calcular o salário total dos funcionários
-     public double calcularSalarioTotalFuncionarios() {
+     public double gastosComSalario() {
          if (salarioBaseFuncionario < 0) {
             return -1; // Retorna -1 se o salário base não foi definido
          }
