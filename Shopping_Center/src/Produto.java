@@ -2,12 +2,16 @@ public class Produto {
     
     //Atributos
     private String nome;
-    private double preco;    
+    private double preco;  
+    
+    //Atributos já criados que foram adicionados ao atributo Produto
+    private Data dataValidade;
 
     //Construtor para receber os atributos
-    public Produto (String nome, double preco) {
+    public Produto (String nome, double preco, Data dataValidade) {
         this.nome = nome;
         this.preco = preco;
+        this.dataValidade = dataValidade; //Construtor atualizado para receber o atributo Data
     }
 
     //Getters e Setters
@@ -27,9 +31,24 @@ public class Produto {
         this.preco = preco;
     }
 
+    //Getters e Setters do atributo adicionado Data
+
+    public Data getDataValidade() {
+        return dataValidade;
+    }
+
+    public void setDataValidade(Data dataValidade) {
+        this.dataValidade = dataValidade;
+    }
+
+    // Método para verificar se o produto está vencido
+    public boolean estaVencido(Data dataReferencia) {
+        return !dataValidade.maiorOuIgualQue(dataReferencia);
+    }
+
     // Método toString para exibir as informações do produto
      @Override
     public String toString() {
-    return "Produto: " + nome + ", Preço: R$" + preco;
+    return "Produto: " + nome + ", Preço: R$" + preco + ", Data de Validade: " + dataValidade;
     }
 }

@@ -44,13 +44,11 @@ public class Data {
                 if (dia > 28) return false;
             }
         }
-
-
         return true; // Se todos os testes passarem, a data é válida
     }
 
     // Método para verificar se o ano é bissexto
-            private boolean bissexto(int ano) {
+    private boolean bissexto(int ano) {
         return (ano % 400 == 0) || ((ano % 4 == 0) && (ano % 100 != 0));
     }
     
@@ -82,6 +80,20 @@ public class Data {
     // Método para verificar se o ano é bissexto
     public boolean verificaAnoBissexto() {
         return (ano % 400 == 0) || ((ano % 4 == 0) && (ano % 100 != 0));
+    }
+
+    // Método para verificar se a data é maior ou igual a outra data
+    public boolean maiorOuIgualQue(Data outraData) {
+        if (this.ano > outraData.ano) {
+            return true;
+        } else if (this.ano == outraData.ano) {
+            if (this.mes > outraData.mes) {
+                return true;
+            } else if (this.mes == outraData.mes) {
+                return this.dia >= outraData.dia;
+            }
+        }
+        return false;
     }
 
     // Método toString para exibir a data no formato dd/mm/aaaa
